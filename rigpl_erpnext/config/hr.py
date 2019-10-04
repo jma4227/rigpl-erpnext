@@ -3,7 +3,7 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"label": _("Employee Loan Management"),
+			"label": _("Loans"),
 			"icon": "icon-gear",
 			"items": [
 				{
@@ -11,11 +11,41 @@ def get_data():
 					"name": "Employee Advance",
 					"description": _("Employee Advance"),
 				},
+				{
+					"type": "report",
+					"is_query_report": True,
+					"name": "Employee Loan Analysis",
+					"doctype": "Employee Advance",
+				},
 			]
 		},
 		{
-			"label": _("Rohit Reports"),
-			"icon": "icon-paper-clip",
+			"label": _("Payroll"),
+			"icon": "icon-gear",
+			"items": [
+				{
+					"type": "report",
+					"is_query_report": True,
+					"name": "Employee Balances RIGPL",
+					"doctype": "Salary Slip",
+				},
+				{
+					"type": "report",
+					"is_query_report": True,
+					"name": "Salary Structure",
+					"doctype": "Salary Structure",
+				},
+				{
+					"type": "report",
+					"is_query_report": True,
+					"name": "Salary Register",
+					"doctype": "Salary Slip",
+				}
+			]
+		},
+		{
+			"label": _("Attendance"),
+			"icon": "icon-gear",
 			"items": [
 				{
 					"type": "report",
@@ -28,18 +58,6 @@ def get_data():
 					"is_query_report": True,
 					"name": "Employee Attendance",
 					"doctype": "Attendance",
-				},
-				{
-					"type": "report",
-					"is_query_report": True,
-					"name": "Employee Balances RIGPL",
-					"doctype": "Salary Slip",
-				},
-				{
-					"type": "report",
-					"is_query_report": True,
-					"name": "Employee Loan Analysis",
-					"doctype": "Employee Advance",
 				},
 				{
 					"type": "report",
@@ -65,18 +83,6 @@ def get_data():
 					"name": "Roster",
 					"doctype": "Roster",
 				},
-				{
-					"type": "report",
-					"is_query_report": True,
-					"name": "Salary Structure",
-					"doctype": "Salary Structure",
-				},
-				{
-					"type": "report",
-					"is_query_report": True,
-					"name": "Salary Register",
-					"doctype": "Salary Slip",
-				}
 			]
-		}
+		},
 	]
