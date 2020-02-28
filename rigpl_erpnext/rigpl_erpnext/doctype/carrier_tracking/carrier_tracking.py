@@ -12,11 +12,11 @@ from rigpl_erpnext.rigpl_erpnext.scheduled_tasks.shipment_data_update import *
 from rigpl_erpnext.rigpl_erpnext.validations.sales_invoice import create_new_carrier_track
 from frappe.utils import flt, cint, cstr
 from frappe.utils.file_manager import save_file, remove_all
-import fedex
+# import fedex
 import base64
 import datetime
-from fedex.tools.conversion import sobject_to_dict
-from fedex.tools.conversion import sobject_to_json
+# from fedex.tools.conversion import sobject_to_dict
+# from fedex.tools.conversion import sobject_to_json
 
 
 class CarrierTracking(Document):
