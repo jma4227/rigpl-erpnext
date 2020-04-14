@@ -24,9 +24,9 @@ class SchedulePickup(Document):
 	def schedule_pickup_service (self, credentials, from_address_doc, \
 		from_country_doc, transporter_doc):
 		from_state_doc = frappe.get_doc("State", from_address_doc.state_rigpl)
-		from fedex.services.pickup_service import FedexCreatePickupRequest
+# 		from fedex.services.pickup_service import FedexCreatePickupRequest
 		customer_transaction_id = self.name  # Optional transaction_id
-		pickup_service = FedexCreatePickupRequest(credentials)
+# 		pickup_service = FedexCreatePickupRequest(credentials)
 		pickup_service.OriginDetail.PickupLocation.Contact.PersonName = \
 			from_address_doc.address_title[0:35]
 		pickup_service.OriginDetail.PickupLocation.Contact.EMailAddress = from_address_doc.email_id
@@ -83,7 +83,7 @@ class SchedulePickup(Document):
 		return credentials, from_address_doc, from_country_doc, transporter_doc
 
 	def get_fedex_credentials(self, transporter_doc):
-		from fedex.config import FedexConfig
+# 		from fedex.config import FedexConfig
 		credentials = FedexConfig(key = transporter_doc.fedex_key,
 				password = transporter_doc.fedex_password,
 				account_number = transporter_doc.fedex_account_number,
