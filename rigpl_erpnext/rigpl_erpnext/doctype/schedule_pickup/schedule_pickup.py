@@ -6,11 +6,11 @@ from __future__ import unicode_literals
 import frappe
 from frappe.utils import get_datetime
 import json
-import fedex
+# import fedex
 import datetime
 from frappe.model.document import Document
-from fedex.tools.conversion import sobject_to_dict
-from fedex.tools.conversion import sobject_to_json
+# from fedex.tools.conversion import sobject_to_dict
+# from fedex.tools.conversion import sobject_to_json
 
 class SchedulePickup(Document):
 	def schedule_pickup(self):
